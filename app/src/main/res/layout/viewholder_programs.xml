@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/margin_medium_2"
+    android:background="@color/bg">
+
+
+    <com.padc.simplehabit.Utils.RoundRectCornerImageView
+        android:id="@+id/iv_program"
+        android:layout_width="170dp"
+        android:layout_height="130dp"
+        android:src="@drawable/simple_habit_starter"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Overthinking"
+        android:layout_below="@+id/iv_program"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_regular_2x"
+        android:layout_alignLeft="@id/iv_program"
+        android:layout_alignRight="@id/iv_program"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"/>
+
+    <TextView
+        android:id="@+id/tv_peroid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5 mins"
+        android:layout_below="@id/tv_title"
+        android:layout_alignLeft="@id/tv_title"
+        android:layout_alignRight="@id/tv_title"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:textColor="@color/gray"
+        />
+
+</RelativeLayout>

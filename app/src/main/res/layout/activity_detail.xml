@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkblack">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/ctbl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/news_details_appbar_height"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:title="Unlock Your Full Potential"
+            app:expandedTitleGravity="center"
+            app:expandedTitleTextAppearance="@style/Toolbar.TitleText"
+            >
+
+
+            <RelativeLayout
+                android:id="@+id/rl_collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_program_detail_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/simple_habit_starter"
+                    android:tint="@color/overlay"
+                    />
+
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:layout_collapseMode="pin"/>
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:descendantFocusability="blocksDescendants">
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           >
+        <RelativeLayout
+                android:id="@+id/rl_download"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/darkGray"
+                >
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_download_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/margin_medium_2"
+                    android:layout_marginRight="@dimen/margin_medium_3"
+                    android:layout_marginBottom="@dimen/margin_medium_2"
+                    android:background="@color/darkGray">
+
+                    <TextView
+                        android:id="@+id/tv_program_detail_download"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Download"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_regular_2x" />
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true" />
+
+
+               </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_download"
+            android:layout_margin="@dimen/margin_medium_2">
+
+            <RelativeLayout
+                android:id="@+id/rl_description_lecturer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_lecturer"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/lecturer"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tv_lecturer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jason Stephenson"
+                android:layout_toRightOf="@id/iv_lecturer"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_centerInParent="true"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_regular_2x" />
+
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/des"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_regular_2x"
+                android:lineSpacingMultiplier="1.2"
+                android:maxLines="3"
+                android:ellipsize="end"
+                android:layout_below="@id/rl_description_lecturer"
+                android:layout_marginTop="@dimen/margin_medium"/>
+
+
+            <TextView
+                android:id="@+id/tv_read_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="READ MORE"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:layout_below="@id/tv_description"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                />
+
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:id="@+id/tv_session"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SESSIONS"
+            android:textColor="@color/white"
+            android:layout_below="@id/rl_description"
+           android:layout_alignLeft="@id/rl_description"
+            android:layout_marginTop="@dimen/margin_medium_2"/>
+
+
+         <android.support.v7.widget.RecyclerView
+             android:id="@+id/rv_sessions"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@id/tv_session"
+            android:layout_marginTop="@dimen/margin_xlarge"
+             android:layout_marginLeft="22dp"
+             android:layout_marginRight="22dp"
+             android:descendantFocusability="blocksDescendants"/>
+
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+</android.support.v4.widget.NestedScrollView>
+
+
+<android.support.design.widget.FloatingActionButton
+android:id="@+id/fab_share"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginRight="@dimen/margin_medium_2"
+android:src="@drawable/ic_play_arrow_white_24dp"
+app:layout_anchor="@id/appbar_layout"
+app:layout_anchorGravity="right|bottom"
+app:backgroundTint="@color/blue" />
+
+    </android.support.design.widget.CoordinatorLayout>

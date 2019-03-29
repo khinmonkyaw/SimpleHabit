@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_recents"
+        android:enabled="true"
+        android:icon="@drawable/ic_play_circle_filled_black_24dp"
+        android:title="Meditate"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_favorites"
+        android:enabled="true"
+        android:icon="@drawable/ic_person_black_24dp"
+        android:title="Me"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_nearby"
+        android:enabled="true"
+        android:icon="@drawable/ic_more_horiz_black_24dp"
+        android:title="More"
+        app:showAsAction="ifRoom" />
+</menu>
